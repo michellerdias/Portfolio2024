@@ -22,26 +22,23 @@
     <header>
         <div class="interface">
             <div class="logo">
-                <a href="#">
-                    <img src="images/logo.png" alt="Logo Michelle Dias">
-                </a>
-                <p>Michelle Dias</p>
+                <p>Michelle <span>Dias</span></p>
             </div><!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </nav>
 
-            <div class="btn-contato">
-                <a href="#">
+            <div class="btn-contact">
+                <a href="#contact">
                     <button>Contact</button>
                 </a>
-            </div><!--btn-contato-->
+            </div><!--btn-contact-->
 
             <div class="btn-abrir-menu" id="btn-menu">
                 <i class="bi bi-list"></i>
@@ -54,11 +51,11 @@
 
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -68,7 +65,7 @@
     </header>
 
     <main>
-        <section class="topo-do-site">
+        <section id="home" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -81,8 +78,13 @@
                             <h1>Michelle Dias<span>.</span></h1>
                         </div>
                         <p>Backend Developer</p>
-                        <div class="btn-contato">
-                            <a href="#">
+                        <div class="btn-social">
+                            <a href="https://wa.me/5531975141904" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+                            <a href="https://www.linkedin.com/in/michellerenatadias/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/michellerdias" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                        </div><!--btn-social-->
+                        <div class="btn-contact">
+                            <a href="#contact">
                                 <button>Get in Touch</button>
                             </a>
                         </div>
@@ -95,7 +97,7 @@
             </div><!--interface-->
         </section><!--topo-do-site-->
 
-        <section class="about">
+        <section id="about" class="about">
             <div class="interface">
                 <div class="flex">
                     <div class="left">
@@ -216,7 +218,7 @@
         </section><!--about-->
 
 
-        <section class="education">
+        <section id="education" class="education">
             <div class="interface">
                 <h2 class="timeline-title">Education<span>.</span></h2>
                 <div class="flex">
@@ -316,5 +318,59 @@
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--education-->
+
+        <section id="projects" class="portfolio">
+            <div class="interface">
+                <h2 class="title">Projects<span>.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 1</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+        <section id="contact" class="formulario">
+            <div class="interface">
+                <h2 class="title">Contact<span>.</span></h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Your name:" required>
+                    <input type="text" name="" id="" placeholder="Your e-mail:" required>
+                    <input type="text" name="" id="" placeholder="Your phone number:">
+                    <textarea name="" id="" placeholder="Your message:" required></textarea>
+                    <div class="btn-send"><input type="submit" value="SEND"></div>
+                </form>
+            </div><!--interface-->
+        </section><!--formulario-->
+
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo">
+                        <p>Michelle <span>Dias</span></p>
+                    </div><!--logo-->
+                    <div class="btn-social">
+                        <a href="https://wa.me/5531975141904" target="_blank"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="https://www.linkedin.com/in/michellerenatadias/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/michellerdias" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                    </div><!--btn-social-->
+                </div><!--flex-->
+            </div><!--line-footer-->
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:michellerenatadias@gmail.com"> michellerenatadias@gmail.com</a></p>
+            </div><!--line-footer borda-->
+        </div><!--interface-->
+    </footer>
+
 </body>
 </html>

@@ -6,11 +6,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body {
     background-color: #F8F3ED;
     height: 100vh;
     padding-top: 70px;
 }
+
 
 .interface {
     max-width: 1280px;
@@ -21,31 +23,34 @@ body {
     display: flex;
 }
 
-.btn-contato button {
+.btn-contact button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #72B0F3;
-    border: 0;
+    background-color: #F8F3ED;
+    border: 1px solid #72B0F3;
+    color: #007FFF;
     border-radius: 30px;
     cursor: pointer;
-    transition: .2s;
+    transition: .2s ease-in-out;
+}
+
+.btn-contact button:hover {
+    box-shadow: 0px 0px 8px #007FFF;
+    background-color: #007FFF;
+    color: white;
+    transform: scale(1.1);
 }
 
 h2.title {
     color: #000;
-    font-size: 38px;
+    font-size: 2.5rem;
 }
 
 h2.title span {
     color: #E796C0;
 }
 
-button:hover,
-form .btn-enviar input:hover {
-    box-shadow: 0px 0px 8px #E796C0;
-    transform: scale(1.05);
-}
 
 /* ESTILO DO CABEÇALHO */
 header {
@@ -68,7 +73,7 @@ header a {
     color: #000;
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
+    transition: .2s ease-in-out;
 }
 
 header nav.menu-desktop a:hover {
@@ -85,33 +90,36 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-header .btn-contato button {
+header .btn-contact button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
     background-color: #72B0F3;
-    border: 0;
+    color: black;
+    border: 2px;
     border-radius: 30px;
     cursor: pointer;
-    transition: .2s;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    max-width: auto; /* Ajuste o tamanho da imagem conforme necessário */
-    margin-right: 10px; /* Adiciona um espaço entre a imagem e o texto */
+    transition: .2s ease-in-out;
 }
 
 .logo p {
-    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
-    margin: 0; /* Remove as margens padrão do parágrafo */
+    font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
+    margin: 0 0 0 40px; 
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
+    font-style: bold;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.logo p span{
+    color: #007fff;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
 }
 
 /* ESTILO DO MENU MOBILE */
@@ -121,7 +129,7 @@ header .btn-contato button {
 }
 
 .btn-abrir-menu i{
-    color: #72B0F3;
+    color: #CFDFF1;
     font-size: 40px;
 }
 
@@ -151,7 +159,7 @@ header .btn-contato button {
 }
 
 .menu-mobile .btn-fechar i{
-    color: #72B0F3;
+    color: #CFDFF1;
     font-size: 30px;
 }
 
@@ -168,7 +176,7 @@ header .btn-contato button {
 }   
 
 .menu-mobile nav ul li a:hover{
-    background-color: #72B0F3;
+    background-color: #CFDFF1;
     color: #000;
 }
 
@@ -247,10 +255,12 @@ section.topo-do-site .flex {
 .topo-do-site .img-topo-site img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
+    margin-top: -80px;
 }
 
-.topo-do-site .btn-contato {
-    margin: 30px;
+.topo-do-site .img-topo-site img:hover{
+    transform: scale(1.2);
+    transition: .2s ease-in-out;
 }
 
 
@@ -289,8 +299,13 @@ section.about {
     max-width: 200px; /* Defina o valor desejado */
     height: auto;
 }
+
+.about .img-about img:hover {
+    transform: scale(1.2);
+    transition: .2s ease-in-out;
+}
 .about .txt-about {
-    color: #000;
+    color: black;
     text-align: center;
     background-color: #CFDFF1;
     padding: 10px;
@@ -302,9 +317,26 @@ section.about {
     font-size: 12px;
 }
 
-.btn-social {
-    margin-top: 20px; /* Adiciona espaço entre o texto e os botões sociais */
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #72B0F3;
+    background-color: #F8F3ED;
+    color: #007FFF;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px 0 20px 5px;
+    transition: .2s ease-in-out;
 }
+
+.btn-social button:hover {
+    box-shadow: 0px 0px 8px #007FFF;
+    background-color: #007FFF;
+    color: white;
+    transform: scale(1.1);
+}
+
 
 .about .wrapper {
     display: flex;
@@ -392,7 +424,7 @@ section.about {
 }
 
 .title h1{
-    font-size: 38px;
+    font-size: 2.5rem;
 }
 .title span{
     color: #E796C0;
@@ -437,6 +469,7 @@ section.about {
     text-align: center; /* Centraliza o texto */
     font-size: 18px;
     font-weight: 500;
+    color: black;
 }
 
 .cards {
@@ -448,17 +481,16 @@ section.about {
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
-    padding: 5px;
     text-align: center;
     flex-basis: calc(33.33% - 20px); /* Define a largura dos elementos para ocupar um terço da largura, com espaço entre eles */
     flex-grow: 1; /* Faz com que os cards ocupem todo o espaço disponível na linha */
     max-width: 200px; /* Define a largura máxima dos cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
 .card p{
-    font-size: 14px;
+    font-size: 1rem;
+    font-weight: 450;
 }
 .card img{
     width: 50px;
@@ -467,7 +499,7 @@ section.about {
 
 /*Education*/
 section.education {
-    padding: 40px 4%;
+    padding: 80px 4%;
 }
 
 section.education .flex {
@@ -477,7 +509,7 @@ section.education .flex {
 .timeline-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 38px;
+    font-size: 2.5rem;
     color: #000;
 }
 .timeline-title span{
@@ -618,4 +650,228 @@ section.education .flex {
 
 .timeline .timeline-item:hover .timeline-content h2{
     font-style: italic;
+}
+
+.timeline li:last-child {
+    margin-bottom: 10px; /* Reduz a margem inferior do último item da timeline */
+}
+
+/* ESTILO DO PORTFÓLIO */
+
+section.portfolio {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+section.portfolio .interface {
+    text-align: center; /* Adicionado para centralizar o título */
+}
+
+.img-port {
+    width: 360px;
+    height: 400px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E6D1BD;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.title span{
+    color: #E796C0;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+    margin-top: -20px;
+}
+
+section.formulario .interface {
+    text-align: center; /* Adicionado para centralizar o título */
+}
+
+section.formulario .title {
+    text-align: center;
+    margin-bottom: 10px; /* Reduz a margem inferior do título "Contato" */
+    font-size: 2.5rem;
+    color: #000;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #E6D1BD;
+    border: 0;
+    outline: 0;
+    padding: 15px 15px;
+    border-radius: 15px;
+    color: #000;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    height: 150px;
+    max-height: 300px;
+}
+
+form .btn-send {
+    margin-top: 10px;
+    text-align: center;
+}
+
+form .btn-send input {
+    width: 120px;
+    background-color: #E6D1BD;
+    color: #000;
+    border: 2px solid #E6D1BD;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+form .btn-send input:hover {
+    box-shadow: 0px 0px 8px #E6D1BD;
+    transform: scale(1.05);
+    background-color: #E6D1BD;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #E6D1BD;
+}
+
+footer .line-footer p i {
+    color: #E6D1BD;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #000;
+}
+
+/* @media screen and (max-width: 1020px) {
+    /* STYLE PARA MOBILE
+
+/* PORTFÓLIO */
+section.portfolio {
+    padding: 80px 8%;
+}
+
+.img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+section.portfolio .flex {
+   gap: 60px;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 4%;
+    background-color: #E6D1BD;
+}
+
+footer .flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #F8F3ED;
+    background-color: #F8F3ED;
+    color: #007FFF;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px 0 20px 5px;
+    transition: .2s ease-in-out;
+}
+
+footer .btn-social button:hover {
+    box-shadow: 0px 0px 8px #F8F3ED;
+    background-color: #F8F3ED;
+    color: #E796C0;
+    transform: scale(1.1);
+}
+
+footer .logo:hover span{
+    color: #E796C0;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #007FFF;
+    margin-left: 40px;
+}
+
+footer .line-footer p i{
+    text-align: center;
+    color: #007FFF;
+    font-size: 22px;
 }
