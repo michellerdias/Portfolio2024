@@ -35,7 +35,6 @@ body {
 h2.title {
     color: #000;
     font-size: 38px;
-    text-align: center;
 }
 
 h2.title span {
@@ -475,17 +474,18 @@ section.education .flex {
     gap: 60px;
 }
 
-.education .education-box {
-    padding: 40px;
-    border-radius: 20px;
-    margin-top: 45px;
-    transition: .2s;
-    background-color: #E6D1BD;
+.timeline-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 38px;
+    color: #000;
+}
+.timeline-title span{
+    color: #E796C0;
 }
 
 .timeline{
     width: 1200px;
-    margin: 75px auto;
 }
 
 .timeline ul{
@@ -508,6 +508,18 @@ section.education .flex {
     top: 20px;
     z-index: 2;
     transition: 0.2s linear;
+    font-weight: 700;
+}
+
+.timeline b{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    transition: 0.2s linear;
+    font-weight: 400;
 }
 
 .timeline .date{
@@ -573,8 +585,10 @@ section.education .flex {
     transition: 0.2s linear;
 }
 
-.timeline .timeline-item:hover a{
+.timeline .timeline-item:hover a,
+.timeline .timeline-item:hover b{
     transform: translateX(42px);
+    text-decoration: underline;
 }
 
 .timeline .timeline-item:hover .circle{
@@ -588,7 +602,20 @@ section.education .flex {
     transform: translateX(20px);
 }
 
-.timeline .timeline-item:hover .timeline-content p{
+.timeline .timeline-item:hover .timeline-content p,
+.timeline .timeline-item:hover .timeline-content h1,
+.timeline .timeline-item:hover .timeline-content h2{
     max-height: 500px;
     color: #000;
+    margin: 5px;
+}
+
+.timeline .timeline-item:hover .timeline-content h1,
+.timeline .timeline-item:hover .timeline-content h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.timeline .timeline-item:hover .timeline-content h2{
+    font-style: italic;
 }
