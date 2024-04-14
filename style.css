@@ -713,16 +713,16 @@ section.projects .interface {
 }
 
 /*CONTACT*/
-section.form {
+section.contact {
     padding: 80px 4%;
     margin-top: -20px;
 }
 
-section.form .interface {
+section.contact .interface {
     text-align: center;
 }
 
-section.form .title {
+section.contact .title {
     text-align: center;
     margin-bottom: 10px;
     font-size: 2.5rem;
