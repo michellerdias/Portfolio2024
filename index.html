@@ -344,8 +344,8 @@
             <div class="interface">
                 <h2 class="title">Projects<span>.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 1</div>
+                    <div class="img-port" style="background-image: url(Images/guardachuva.jpg);">
+                        <div class="overlay">Umbrella Project</div>
                     </div>
                     <div class="img-port" style="background-image: url(images/imagem.jpg);">
                         <div class="overlay">Projeto 2</div>
@@ -360,14 +360,26 @@
         <section id="contact" class="contact">
             <div class="interface">
                 <h2 class="title">Contact<span>.</span></h2>
-
-                <form method="post" action="form.php">
-                    <input type="text" name="name" id="name" placeholder="Name" required>
-                    <input type="text" name="email" id="email" placeholder="E-mail" required>
-                    <input type="text" name="phone" id="phone" placeholder="Phone Number">
-                    <textarea name="message" id="message" placeholder="Message" required></textarea>
-                    <div class="btn-send"><input type="submit" value="SEND"></div>
+                <form method="post" action="envia.php">
+                    <div class="input-single">
+                        <input class="input" type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-single">
+                        <input class="input" type="text" id="email" name="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div class="input-single">
+                        <input class="input" type="text" id="phone" name="phone" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="message-single">
+                        <textarea class="message" id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="btn-send"><input type="submit" value="Send"></div>
                 </form>
+
             </div><!--interface-->
         </section><!--contact-->
     </main>
