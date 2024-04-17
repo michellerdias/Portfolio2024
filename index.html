@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- END BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="style.css">
-
-    <script src="menu.js" defer></script>
-
+    <script src="script.js" defer></script>
     <title>Michelle Dias</title>
 </head>
 
@@ -98,7 +96,7 @@
                     </div><!--txt-home-->
 
                     <div class="img-home">
-                        <img src="images/michelle.png" alt="My picture - Michelle Dias">
+                        <img src="Images/michelle.png" alt="My picture - Michelle Dias">
                     </div><!--img-home-->
                 </div><!--flex-->
             </div><!--interface-->
@@ -109,7 +107,7 @@
                 <div class="flex">
                     <div class="left">
                         <div class="img-about">
-                            <img src="images/michelle2.png" alt="My 2nd picture - Michelle Dias">
+                            <img src="Images/michelle2.png" alt="My 2nd picture - Michelle Dias">
                         </div><!--img-about-->
                         <div class="txt-about">
                             <p>Hello! My name is <span>Michelle Dias</span>.</p>
@@ -344,42 +342,65 @@
             <div class="interface">
                 <h2 class="title">Projects<span>.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(Images/guardachuva.jpg);">
-                        <div class="overlay">Umbrella Project</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 2</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 3</div>
-                    </div>
+                    <a href="https://github.com/michellerdias/Guarda-Chuva" target="_blank" class="img-link">
+                        <div class="img-port" style="background-image: url(Images/guardachuva.jpg);">
+                            <div class="overlay">Umbrella Project</div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="img-link">
+                        <div class="img-port" style="background-image: url(Images/imagem.jpg);">
+                            <div class="overlay">Projeto 2</div>
+                        </div>
+                    </a>
+                    <a href="" target="_blank" class="img-link">
+                        <div class="img-port" style="background-image: url(Images/imagem.jpg);">
+                            <div class="overlay">Projeto 3</div>
+                        </div>
+                    </a>
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--projects-->
 
         <section id="contact" class="contact">
             <div class="interface">
-                <h2 class="title">Contact<span>.</span></h2>
-                <form method="post" action="envia.php">
-                    <div class="input-single">
-                        <input class="input" type="text" id="name" name="name" required>
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="input-single">
-                        <input class="input" type="text" id="email" name="email" required>
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="input-single">
-                        <input class="input" type="text" id="phone" name="phone" required>
-                        <label for="phone">Phone Number</label>
-                    </div>
-                    <div class="message-single">
-                        <textarea class="message" id="message" name="message" required></textarea>
-                        <label for="message">Message</label>
-                    </div>
-                    <div class="btn-send"><input type="submit" value="Send"></div>
-                </form>
-
+                    <h2 class="title">Contact<span>.</span></h2>
+                    <div class="container">
+                    <form method="post" action="form.php">
+                        <div class="input-single">
+                            <input class="input" type="text" id="name" name="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-single">
+                            <input class="input" type="text" id="email" name="email" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="input-single">
+                            <input class="input" type="text" id="phone" name="phone" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="message-single">
+                            <textarea class="message" id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <div class="btn-send"><input type="submit" value="Send"></div>
+                    </form>
+                    <div class="myWrapper">
+                        <div class="thumbs">
+                            <div class="thumb" onclick="playVid('one')">EN</div>
+                            <div class="thumb" onclick="playVid('two')">FR</div>
+                            <div class="thumb" onclick="playVid('three')">PT (BR)</div>
+                        </div><!--thumbs-->
+                        <div id="videoHolder">
+                            <video id="myVideo" controls
+                                poster="https://frontenddevelopment.tech/video-gallery/img/vid_1.jpg">
+                                <source id="mp4" src="https://frontenddevelopment.tech/video-gallery/mp4/vid_1.mp4"
+                                    type="video/mp4">
+                                <source id="webm" src="https://frontenddevelopment.tech/video-gallery/webm/vid_1.webm"
+                                    type="video/webm">
+                            </video>
+                        </div><!--videoHolder-->
+                    </div><!--myWrapper-->
+                </div><!--container-->
             </div><!--interface-->
         </section><!--contact-->
     </main>
@@ -409,4 +430,5 @@
     </footer>
 
 </body>
+
 </html>

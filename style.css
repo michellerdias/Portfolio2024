@@ -675,7 +675,7 @@ section.projects .interface {
     width: 360px;
     height: 400px;
     background-size: cover;
-    background-position: 100% 50%;
+    background-position: 100% 35%;
     transition: 4s;
     cursor: pointer;
     border-radius: 40px;
@@ -731,9 +731,10 @@ section.contact .title {
 
 form{
     background: #E6D1BD;
-    max-width: 500px;
+    width: 40%;
     padding: 20px 40px 20px 40px;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 form .input-single,
@@ -801,7 +802,7 @@ form .btn-send input {
     font-size: 18px;
     font-weight: 600;
     background-color: #F8F3ED;
-    color: #4A4B50;
+    color: #000;
     border: 1px solid #F8F3ED;
     border-radius: 30px;
     cursor: pointer;
@@ -820,6 +821,69 @@ form .input-single .textarea:valid ~ label{
     font-size: 12px;
     color: #FF007F;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.myWrapper {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Coloca os thumbs em uma coluna */
+    align-items: center; /* Centraliza os thumbs horizontalmente */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#videoHolder {
+    text-align: center;
+}
+
+#myVideo {
+    width: 80%;
+    outline: none;
+}
+
+.thumbs {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 15px; /* Adiciona uma margem na parte inferior */
+}
+
+.thumb {
+    flex: 0 0 150px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #E6D1BD;
+    border: 1px solid #E6D1BD;
+    color: #000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    margin: 0 5px;
+
+}
+
+.thumb:hover {
+    box-shadow: 0px 0px 8px #E6D1BD;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1280px) {
+    #videoHolder,
+    form {
+        width: 100%; /* Em telas menores que 1280px, cada item ocupa toda a largura */
+    }
+}
+
 
 /*FOOTER*/
 footer {
