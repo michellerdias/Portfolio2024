@@ -26,16 +26,16 @@ body {
     font-size: 18px;
     font-weight: 600;
     background-color: #F8F3ED;
-    border: 1px solid #72B0F3;
-    color: #007FFF;
+    border: 1px solid #A28578;
+    color: #A28578;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s ease-in-out;
 }
 
 .btn-contact button:hover {
-    box-shadow: 0px 0px 8px #007FFF;
-    background-color: #007FFF;
+    box-shadow: 0px 0px 8px #A28578;
+    background-color: #A28578;
     color: white;
     transform: scale(1.1);
 }
@@ -91,7 +91,7 @@ header .btn-contact button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #72B0F3;
+    background-color: #E4AAC8;
     color: black;
     border: 2px;
     border-radius: 30px;
@@ -111,7 +111,7 @@ header .btn-contact button {
 }
 
 .logo p span{
-    color: #007fff;
+    color: #E796C0;
 }
 
 .logo:hover{
@@ -252,6 +252,8 @@ section.home .flex {
 .home .img-home img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
+    height: 50vh;
+    width: auto;
     margin-top: -80px;
 }
 
@@ -315,13 +317,17 @@ section.about {
     font-size: 12px;
 }
 
+.about .btn-social{
+    justify-content: space-between;
+
+}
 .btn-social button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 1px solid #72B0F3;
+    border: 1px solid #A28578;
     background-color: #F8F3ED;
-    color: #007FFF;
+    color: #A28578;
     font-size: 22px;
     cursor: pointer;
     margin: 10px 0 20px 5px;
@@ -329,8 +335,8 @@ section.about {
 }
 
 .btn-social button:hover {
-    box-shadow: 0px 0px 8px #007FFF;
-    background-color: #007FFF;
+    box-shadow: 0px 0px 8px #A28578;
+    background-color: #A28578;
     color: white;
     transform: scale(1.1);
 }
@@ -912,7 +918,7 @@ footer .line-footer p a {
     color: #000;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1280px) {
 
 /*PROJECTS - MOBILE STYLE*/
 section.portfolio {
@@ -922,12 +928,23 @@ section.portfolio {
 .img-port {
     width: 100%;
     max-width: 360px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 section.portfolio .flex {
    gap: 60px;
 }
+
+.home h1 {
+    color: #000;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.home .txt-home{
+    padding: 0;
+}
+
 }
 
 /* FOOTER */
@@ -990,4 +1007,20 @@ footer .line-footer i.bi-envelope-fill {
     margin-right: 5px;
     font-size: 22px;
     color: black;
+}
+
+@media screen and (max-width: 1280px) {
+    /* GENERAL CLASSES */
+    .flex{
+        flex-direction: column;
+    }
+
+    .home .flex{
+        flex-direction: column-reverse;
+    }
+    /* HEADER */
+    .menu-desktop, .btn-contact{
+        display: none;
+    }
+
 }
