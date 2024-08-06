@@ -13,7 +13,7 @@ body {
 }
 
 .interface {
-    max-width: 1280px;
+    max-width: 1180px;
     margin: 0 auto;
 }
 
@@ -127,20 +127,8 @@ header .btn-contact button {
 }
 
 .btn-open-menu i{
-    color: #112237;
+    color: #d5e7f0;
     font-size: 40px;
-}
-
-.menu-mobile{
-    background-color: #EBDBCB;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
 }
 
 .menu-mobile.open-menu{
@@ -151,13 +139,16 @@ header .btn-contact button {
     display: block;
 }
 
-.menu-mobile .btn-close{
-    padding: 20px 5%;
-}
-
-.menu-mobile .btn-close i{
-    color: #112237;
-    font-size: 30px;
+.menu-mobile{
+    background-color: #112237;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
 }
 
 .menu-mobile nav ul{
@@ -165,7 +156,7 @@ header .btn-contact button {
 }
 
 .menu-mobile nav ul li a{
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -173,12 +164,21 @@ header .btn-contact button {
 }   
 
 .menu-mobile nav ul li a:hover{
-    background-color: #112237;
+    background-color: #d5e7f0;
     color: #000;
 }
 
+.menu-mobile .btn-close{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-close i{
+    color: #d5e7f0;
+    font-size: 30px;
+}
+
 .overlay-menu{
-    background-color: #000000df;
+    background-color: #112237cc;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -201,7 +201,6 @@ section.home .flex {
     gap: 90px;
     justify-content: space-between;
     margin: 50px;
-
 }
 
 .hi {
@@ -229,7 +228,7 @@ section.home .flex {
 
 .home h1 {
     color: #000;
-    font-size: 54px;
+    font-size: 42px;
     line-height: 60px;
 }
 
@@ -890,11 +889,6 @@ form .input-single .textarea:valid ~ label{
     transform: scale(1.1);
 }
 
-@media only screen and (max-width: 1280px) {
-
-}
-
-
 /*FOOTER*/
 
 footer .flex {
@@ -975,7 +969,7 @@ footer .line-footer a:hover {
     color: #d5e7f0;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1180px) {
     /* GENERAL CLASSES */
     .flex{
         flex-direction: column;
@@ -989,7 +983,12 @@ footer .line-footer a:hover {
         display: none;
     }
 
+    .btn-open-menu{
+        display: block;
+    }
+
     /* ABOUT */
+
     .right {
         flex-direction: column;
     }
