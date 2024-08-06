@@ -502,6 +502,7 @@ section.about {
 }
 
 /*EDUCATION*/
+/*EDUCATION*/
 section.education {
     padding: 80px 4%;
 }
@@ -517,27 +518,30 @@ section.education .flex {
     color: #000;
 }
 
-.timeline-title span{
+.timeline-title span {
     color: #E796C0;
 }
 
-.timeline{
-    width: 1200px;
+.timeline {
+    width: 100%; /* Alterado de 1200px para 100% */
+    max-width: 1200px; /* Mantém o layout original em telas grandes */
+    margin: 0 auto; /* Centraliza a timeline */
 }
 
-.timeline ul{
+.timeline ul {
     list-style: none;
     padding-left: 30px;
     margin-left: 70px;
     border-left: 8px solid #E6D1BD;
 }
 
-.timeline li{
+.timeline li {
     margin: 40px 0;
     position: relative;
 }
 
-.timeline a{
+.timeline a,
+.timeline b {
     text-decoration: none;
     font-size: 1.2em;
     color: #000;
@@ -545,29 +549,25 @@ section.education .flex {
     top: 20px;
     z-index: 2;
     transition: 0.2s linear;
+}
+
+.timeline a {
     font-weight: 700;
 }
 
-.timeline b{
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #000;
-    position: absolute;
-    top: 20px;
-    z-index: 2;
-    transition: 0.2s linear;
+.timeline b {
     font-weight: 400;
 }
 
-.timeline .date{
+.timeline .date {
     position: absolute;
     top: 50%;
     left: -150px;
-    margin-top:-10px;
+    margin-top: -10px;
     font-size: 1em;
 }
 
-.timeline .circle{
+.timeline .circle {
     position: absolute;
     top: 50%;
     left: -43px;
@@ -579,7 +579,7 @@ section.education .flex {
     border-radius: 50%;
 }
 
-.timeline .timeline-content{
+.timeline .timeline-content {
     max-height: 500px;
     padding: 50px 20px 0 20px;
     border: 2px solid transparent;
@@ -589,7 +589,7 @@ section.education .flex {
 }
 
 .timeline .timeline-content::before,
-.timeline .timeline-content::after{
+.timeline .timeline-content::after {
     content: " ";
     width: 0;
     height: 0;
@@ -599,14 +599,14 @@ section.education .flex {
     transition: 0.2s linear;
 }
 
-.timeline .timeline-content::before{
+.timeline .timeline-content::before {
     border-right-color: inherit;
     border-width: 20px;
     top: 50%;
     margin-top: -20px;
 }
 
-.timeline .timeline-content::after{
+.timeline .timeline-content::after {
     border-right-color: #F8F3ED;
     border-width: 17px;
     top: 50%;
@@ -615,7 +615,7 @@ section.education .flex {
 
 .timeline .timeline-content p,
 .timeline .timeline-content h1,
-.timeline .timeline-content h2{
+.timeline .timeline-content h2 {
     max-height: 0;
     color: transparent;
     margin-bottom: 15px;
@@ -623,16 +623,16 @@ section.education .flex {
 }
 
 .timeline .timeline-item:hover a,
-.timeline .timeline-item:hover b{
+.timeline .timeline-item:hover b {
     transform: translateX(42px);
     text-decoration: underline;
 }
 
-.timeline .timeline-item:hover .circle{
+.timeline .timeline-item:hover .circle {
     background: #E6D1BD;
 }
 
-.timeline .timeline-item:hover .timeline-content{
+.timeline .timeline-item:hover .timeline-content {
     max-height: 500px;
     border-color: #000;
     margin-right: 20px;
@@ -641,24 +641,24 @@ section.education .flex {
 
 .timeline .timeline-item:hover .timeline-content p,
 .timeline .timeline-item:hover .timeline-content h1,
-.timeline .timeline-item:hover .timeline-content h2{
+.timeline .timeline-item:hover .timeline-content h2 {
     max-height: 500px;
     color: #000;
     margin: 5px;
 }
 
 .timeline .timeline-item:hover .timeline-content h1,
-.timeline .timeline-item:hover .timeline-content h2{
+.timeline .timeline-item:hover .timeline-content h2 {
     font-size: 18px;
     font-weight: 500;
 }
 
-.timeline .timeline-item:hover .timeline-content h2{
+.timeline .timeline-item:hover .timeline-content h2 {
     font-style: italic;
 }
 
 .timeline li:last-child {
-    margin-bottom: 10px; /*Reduce the bottom margin of the last item in the timeline*/
+    margin-bottom: 10px; /* Reduce the bottom margin of the last item in the timeline */
 }
 
 /*PROJECTS*/
@@ -836,14 +836,18 @@ form .input-single .textarea:valid ~ label{
 }
 
 .myWrapper {
+    display: none;
+}
+
+/* .myWrapper {
     width: 60%;
     position: relative;
     display: flex;
     flex-direction: column; /* Coloca os thumbs em uma coluna */
-    align-items: center; /* Centraliza os thumbs horizontalmente */
-    justify-content: center;
+    /*align-items: center; /* Centraliza os thumbs horizontalmente */
+    /*justify-content: center;
     margin-bottom: 20px;
-}
+} 
 
 #videoHolder {
     text-align: center;
@@ -916,35 +920,6 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #000;
-}
-
-@media screen and (max-width: 1280px) {
-
-/*PROJECTS - MOBILE STYLE*/
-section.portfolio {
-    padding: 80px 8%;
-}
-
-.img-port {
-    width: 100%;
-    max-width: 360px;
-    margin: 20px auto;
-}
-
-section.portfolio .flex {
-   gap: 60px;
-}
-
-.home h1 {
-    color: #000;
-    font-size: 30px;
-    line-height: 60px;
-}
-
-.home .txt-home{
-    padding: 0;
-}
-
 }
 
 /* FOOTER */
@@ -1023,4 +998,108 @@ footer .line-footer i.bi-envelope-fill {
         display: none;
     }
 
-}
+    /* ABOUT */
+    .right {
+        flex-direction: column;
+    }
+
+    .soft-skills{
+        margin-top: 20px;
+        max-width: 300px;
+    }
+
+    /* EDUCATION */
+
+    /*PROJECTS - MOBILE STYLE*/
+    section.portfolio {
+        padding: 80px 8%;
+    }
+        
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 20px auto;
+    }
+        
+    section.portfolio .flex {
+       gap: 60px;
+    }
+        
+    .home h1 {
+        color: #000;
+        font-size: 30px;
+        line-height: 60px;
+    }
+        
+    .home .txt-home{
+        padding: 0;
+    }
+    section.education {
+    
+    }
+    .timeline {
+        width: 100%; /* Use full width for smaller screens */
+        margin-left: 0; /* Remove left margin */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .timeline ul {
+        padding-left: 20px; /* Adjust padding */
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .timeline .date {
+        position: static; /* Remove absolute positioning */
+        margin-top: 10px; /* Add some margin to separate from the content */
+        font-size: 0.9em; /* Adjust font size */
+        color: #666; /* Change color for better readability */
+    }
+
+    .timeline a,
+    .timeline b {
+        font-size: 1em; /* Adjust font size */
+        position: static; /* Remove absolute positioning */
+        display: block; /* Make it block-level for stacking */
+        margin-top: 10px; /* Add margin for separation */
+    }
+
+    .timeline .circle {
+        display: none; /* Hide the circles */
+    }
+
+    .timeline .timeline-content {
+        padding: 20px 10px; /* Adjust padding */
+        max-height: none; /* Remove max-height */
+        margin-right: 0; /* Remove right margin */
+        transform: none; /* Remove transform */
+    }
+
+    .timeline .timeline-item:hover .timeline-content {
+        max-height: none; /* Remove max-height on hover */
+        border-color: #000; /* Keep the border color */
+        transform: none; /* Remove transform */
+    }
+
+    .timeline .timeline-content::before,
+    .timeline .timeline-content::after {
+        display: none; /* Hide the before and after pseudo-elements */
+    }
+
+    .timeline .timeline-content p,
+    .timeline .timeline-content h1,
+    .timeline .timeline-content h2 {
+        max-height: none; /* Remove max-height */
+        color: #000; /* Ensure text is visible */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .timeline .timeline-content h1,
+    .timeline .timeline-content h2 {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .timeline .timeline-content h1 {
+        font-style: italic;
+        font-weight: normal;
+    }
+    }
